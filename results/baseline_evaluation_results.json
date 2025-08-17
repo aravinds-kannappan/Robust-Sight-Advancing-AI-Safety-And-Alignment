@@ -1,0 +1,12 @@
+{
+  "ResNet18": {
+    "clean_accuracy": 94.8,
+    "ece": 0.032,
+    "mce": 1.49
+  },
+  "ViT-Small": {
+    "clean_accuracy": 91.2,
+    "ece": 0.047,
+    "mce": 1.7
+  }
+}

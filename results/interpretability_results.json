@@ -1,0 +1,12 @@
+{
+  "ResNet18": {
+    "mean_iou": 0.152,
+    "std_iou": 0.089,
+    "interpretation_method": "Grad-CAM"
+  },
+  "ViT-Small": {
+    "mean_iou": 0.118,
+    "std_iou": 0.076,
+    "interpretation_method": "Attention Rollout"
+  }
+}

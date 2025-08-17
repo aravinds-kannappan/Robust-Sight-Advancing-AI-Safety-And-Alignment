@@ -1,0 +1,26 @@
+{
+  "ResNet18": {
+    "FGSM": {
+      "clean_accuracy": 94.8,
+      "adversarial_accuracy": 31.2,
+      "attack_success_rate": 67.1
+    },
+    "PGD": {
+      "clean_accuracy": 94.8,
+      "adversarial_accuracy": 0.1,
+      "attack_success_rate": 99.9
+    }
+  },
+  "ViT-Small": {
+    "FGSM": {
+      "clean_accuracy": 91.2,
+      "adversarial_accuracy": 28.7,
+      "attack_success_rate": 68.5
+    },
+    "PGD": {
+      "clean_accuracy": 91.2,
+      "adversarial_accuracy": 0.0,
+      "attack_success_rate": 100.0
+    }
+  }
+}
