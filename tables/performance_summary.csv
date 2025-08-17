@@ -1,0 +1,5 @@
+Metric,ResNet18,ViT-Small
+Best Clean Accuracy (%),94.8 (Baseline),91.2 (Baseline)
+Best Adversarial Robustness (%),45.2 (Adversarial),38.7 (Adversarial)
+Best Interpretability IoU,0.423 (Aligned),0.387 (Aligned)
+Best mCE,1.49 (Baseline),1.70 (Baseline)

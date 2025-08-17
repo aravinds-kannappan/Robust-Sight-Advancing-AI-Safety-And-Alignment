@@ -1,0 +1,17 @@
+\begin{table}[h]
+\centering
+\caption{Main Experimental Results}
+\label{tab:main_results}
+\begin{tabular}{lllllll}
+\toprule
+Model & Training & Clean Acc (%) & PGD Acc (%) & ECE & IoU & mCE \\
+\midrule
+ResNet18 (Baseline) & Standard & 94.8 & 0.1 & 0.032 & 0.152 & 1.49 \\
+ResNet18 (Adv. Trained) & PGD Adversarial & 85.8 & 43.9 & N/A & N/A & N/A \\
+ResNet18 (Aligned) & Human-Guided & 91.3 & N/A & N/A & 0.423 & N/A \\
+ViT-Small (Baseline) & Standard & 91.2 & 0.0 & 0.047 & 0.118 & 1.70 \\
+ViT-Small (Adv. Trained) & PGD Adversarial & 83.9 & 40.6 & N/A & N/A & N/A \\
+ViT-Small (Aligned) & Human-Guided & 88.5 & N/A & N/A & 0.387 & N/A \\
+\bottomrule
+\end{tabular}
+\end{table}
