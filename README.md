@@ -7,7 +7,7 @@
 
 A comprehensive computer vision AI Safety research project investigating the intersection of **adversarial robustness**, **interpretability**, and **human-guided alignment**. This project provides a complete experimental framework for evaluating and improving the safety and alignment of computer vision models.
 
-## 🎯 Overview
+## Overview
 
 RobustSight addresses critical challenges in AI Safety for computer vision systems:
 
@@ -18,23 +18,23 @@ RobustSight addresses critical challenges in AI Safety for computer vision syste
 
 ### Key Features
 
-- 🔬 **Complete Experimental Pipeline**: From data loading to paper generation
-- 🛡️ **Adversarial Analysis**: FGSM, PGD attacks and defenses
-- 🔍 **Interpretability Tools**: Grad-CAM, Attention Rollout with IoU metrics
-- 🤝 **Human-Guided Alignment**: Novel saliency-alignment training
-- 📊 **Comprehensive Evaluation**: CIFAR-10 and CIFAR-10-C benchmarks
-- 📄 **Research Paper**: 15+ page publication-ready manuscript
-- 🔄 **Reproducible**: Jupyter notebook with step-by-step execution
+- **Complete Experimental Pipeline**: From data loading to paper generation
+- **Adversarial Analysis**: FGSM, PGD attacks and defenses
+- **Interpretability Tools**: Grad-CAM, Attention Rollout with IoU metrics
+- **Human-Guided Alignment**: Novel saliency-alignment training
+- **Comprehensive Evaluation**: CIFAR-10 and CIFAR-10-C benchmarks
+- **Research Paper**: 15+ page publication-ready manuscript
+- **Reproducible**: Jupyter notebook with step-by-step execution
 
 ## 📁 Project Structure
 
 ```
 RobustSight/
-├── 📓 RobustSight_Experiments.ipynb   # Main Jupyter notebook (START HERE)
-├── 📋 requirements.txt                # Dependencies
-├── 📚 README.md                       # This file
+├── RobustSight_Experiments.ipynb   # Main Jupyter notebook (START HERE)
+├── requirements.txt                # Dependencies
+├── README.md                       # This file
 │
-├── 🐍 src/                           # Source code implementation
+├── src/                           # Source code implementation
 │   ├── download_data.py              # Dataset download and preparation
 │   ├── train_baseline.py             # Baseline model training
 │   ├── evaluate_baseline.py          # Model evaluation and metrics
@@ -45,34 +45,34 @@ RobustSight/
 │   ├── distribution_shift.py         # CIFAR-10-C corruption evaluation
 │   └── generate_results.py           # Results compilation and visualization
 │
-├── 💾 data/                          # Datasets
+├── data/                          # Datasets
 │   ├── cifar10/                      # CIFAR-10 dataset (auto-downloaded)
 │   └── cifar10c/                     # CIFAR-10-C corruptions (optional)
 │
-├── 📊 results/                       # Experimental results (JSON)
+├── results/                       # Experimental results (JSON)
 │   ├── baseline_training_results.json
 │   ├── adversarial_attacks_results.json
 │   ├── interpretability_results.json
 │   └── experiment_summary.json
 │
-├── 📈 figures/                       # Generated visualizations
+├── figures/                       # Generated visualizations
 │   ├── baseline_training_comparison.png
 │   ├── adversarial_robustness_analysis.png
 │   ├── interpretability_analysis.png
 │   └── comprehensive_results_summary.png
 │
-├── 📋 tables/                        # Results tables
+├── tables/                        # Results tables
 │   ├── main_results.csv             # Main experimental results
 │   ├── performance_summary.csv      # Performance comparison
 │   └── main_results_table.tex       # LaTeX table format
 │
-├── 🏗️ models/                        # Model checkpoints (generated during training)
+├── models/                        # Model checkpoints (generated during training)
 │
-└── 📄 papers/                        # Research paper
+└── papers/                        # Research paper
     └── robustsight_paper.tex         # Complete LaTeX manuscript
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -173,17 +173,17 @@ python src/generate_results.py
 
 ### Key Findings
 
-1. **🔄 Accuracy-Robustness Trade-off**: Adversarial training improves PGD robustness from 0% to 45% but reduces clean accuracy by 8-9%
+1. **Accuracy-Robustness Trade-off**: Adversarial training improves PGD robustness from 0% to 45% but reduces clean accuracy by 8-9%
 
-2. **🎯 Interpretability Gains**: Human-guided alignment increases IoU from ~0.15 to ~0.42, indicating better focus on meaningful features
+2. ** Interpretability Gains**: Human-guided alignment increases IoU from ~0.15 to ~0.42, indicating better focus on meaningful features
 
-3. **🏗️ Architecture Differences**: ResNet-18 consistently outperforms ViT-Small on CIFAR-10 across all metrics
+3. ** Architecture Differences**: ResNet-18 consistently outperforms ViT-Small on CIFAR-10 across all metrics
 
-4. **⚖️ Multi-Objective Optimization**: No single training method optimizes all objectives; requires careful trade-off consideration
+4. **Multi-Objective Optimization**: No single training method optimizes all objectives; requires careful trade-off consideration
 
-5. **🛡️ Limited Transfer**: Adversarial robustness improvements don't strongly transfer to natural corruption robustness
+5. **Limited Transfer**: Adversarial robustness improvements don't strongly transfer to natural corruption robustness
 
-## 🔧 Configuration Options
+## Configuration Options
 
 ### Model Architectures
 ```python
@@ -220,50 +220,6 @@ The project generates several publication-ready visualizations:
 4. **Multi-Objective Trade-offs**: Clean accuracy vs. robustness vs. interpretability
 
 All figures are saved in `figures/` directory as high-resolution PNG files.
-
-## 📝 Research Paper
-
-The project includes a complete 15+ page research paper (`papers/robustsight_paper.tex`) with:
-
-- **Abstract & Introduction**: Problem motivation and contributions
-- **Related Work**: Comprehensive literature review
-- **Methods**: Detailed experimental methodology
-- **Results**: Complete experimental findings with tables and figures
-- **Discussion**: AI Safety implications and future directions
-- **References**: 22+ relevant citations
-
-### Compile the Paper
-```bash
-cd papers/
-pdflatex robustsight_paper.tex
-# Generates robustsight_paper.pdf
-```
-
-## 🛠️ Extending the Project
-
-### Adding New Models
-1. Implement model creation function in `src/train_baseline.py`
-2. Add model configuration to experiments list
-3. Update evaluation scripts to include new model
-
-### Adding New Attacks
-1. Implement attack method in `src/adversarial_attacks.py`
-2. Add evaluation logic in `evaluate_attack()` function
-3. Update result compilation in `generate_results.py`
-
-### Custom Datasets
-1. Modify data loading functions in `src/download_data.py`
-2. Update normalization constants in training scripts
-3. Adjust model architectures for different input sizes
-
-### New Interpretability Methods
-1. Add new visualization method to `src/interpretability.py`
-2. Implement IoU computation for new method
-3. Update alignment training if needed
-
-## 🐛 Troubleshooting
-
-### Common Issues
 
 **PyTorch Installation Problems**
 ```bash
@@ -305,7 +261,7 @@ python -m ipykernel install --user --name robustsight
 - Enable gradient checkpointing
 - Process data in smaller batches
 
-## 📚 References & Citations
+## References & Citations
 
 If you use this project in your research, please cite:
 
@@ -324,67 +280,3 @@ If you use this project in your research, please cite:
 - Madry et al. (2017): Towards Deep Learning Models Resistant to Adversarial Attacks
 - Selvaraju et al. (2017): Grad-CAM: Visual Explanations from Deep Networks
 - Hendrycks & Dietterich (2019): Benchmarking Neural Network Robustness
-
-## 🤝 Contributing
-
-Contributions are welcome! Areas for improvement:
-
-1. **Additional Attack Methods**: AutoAttack, C&W, etc.
-2. **More Defense Mechanisms**: Certified defenses, detection methods
-3. **Interpretability Methods**: LIME, SHAP, integrated gradients
-4. **Dataset Extensions**: ImageNet, medical imaging datasets
-5. **Alignment Techniques**: Constitutional AI, RLHF integration
-
-### Development Setup
-```bash
-# Install development dependencies
-pip install -r requirements.txt
-pip install black flake8 pytest
-
-# Run code formatting
-black src/
-
-# Run linting
-flake8 src/
-
-# Run tests (if implemented)
-pytest tests/
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **CIFAR-10 Dataset**: Alex Krizhevsky, University of Toronto
-- **CIFAR-10-C**: Dan Hendrycks, University of California, Berkeley
-- **PyTorch Team**: For the excellent deep learning framework
-- **Timm Library**: Ross Wightman for model implementations
-- **AI Safety Community**: For highlighting these critical research directions
-
-## 📞 Support
-
-For questions, issues, or contributions:
-
-1. **Check the Troubleshooting section** above
-2. **Review the Jupyter notebook** for step-by-step execution
-3. **Examine the source code** in `src/` directory
-4. **Create an issue** with detailed error messages and system info
-
-## 🔮 Future Work
-
-Planned enhancements:
-- [ ] Real-time adversarial detection
-- [ ] Multi-modal alignment (vision + language)
-- [ ] Scalability to larger datasets (ImageNet)
-- [ ] Integration with model interpretation tools
-- [ ] Constitutional AI principles for alignment
-- [ ] Certified robustness guarantees
-- [ ] Human-in-the-loop training interface
-
----
-
-**RobustSight** provides a comprehensive framework for AI Safety research in computer vision. Whether you're a researcher, student, or practitioner, this project offers practical tools and insights for building safer, more aligned AI systems.
-
-*Built with ❤️ for AI Safety research*
